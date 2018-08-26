@@ -1,0 +1,35 @@
+{
+  "name": "grepord",
+  "version": "0.1.0",
+  "description": "Grep for an ordered list of files",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava --tap | tap-nyan"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petekeller2/grepord.git"
+  },
+  "keywords": [
+    "grep"
+  ],
+  "author": "Peter Keller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/petekeller2/grepord/issues"
+  },
+  "homepage": "https://github.com/petekeller2/grepord#readme",
+  "ava": {
+    "files": [
+      "test.js"
+    ]
+  },
+  "devDependencies": {
+    "ava": "1.0.0-beta.7",
+    "tap-nyan": "^1.1.0"
+  },
+  "dependencies": {
+    "filesize": "^3.6.1",
+    "shelljs": "^0.8.2"
+  }
+}
