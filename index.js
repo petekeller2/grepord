@@ -49,7 +49,7 @@ function help() {
 }
 
 function isVersionCmd(firstArg) {
-  return ['-v', '--version'].includes(firstArg);
+  return ['-v', '--version'].includes(firstArg.toLowerCase());
 }
 
 function getVersion() {
