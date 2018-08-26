@@ -36,7 +36,7 @@ echoResults(limitedResultsArray);
 
 // ------------ Functions Section ------------
 function isHelpCmd(firstArg) {
-  return ['help', '-h', '--help', 'man'].includes(firstArg);
+  return ['-h', '--help'].includes(firstArg);
 }
 
 function help() {
@@ -49,7 +49,7 @@ function help() {
 }
 
 function isVersionCmd(firstArg) {
-  return ['version', '-v', '--version'].includes(firstArg);
+  return ['-v', '--version'].includes(firstArg);
 }
 
 function getVersion() {
