@@ -14,7 +14,10 @@
   "keywords": [
     "grep"
   ],
-  "author": "Peter Keller",
+  "author": {
+    "name": "Peter Keller",
+    "email": "peterkeller@protonmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/petekeller2/grepord/issues"

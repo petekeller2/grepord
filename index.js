@@ -43,7 +43,13 @@ function help() {
   const readmePath = `${__dirname}/README.md`;
   fs.readFile(readmePath, 'utf8', (err, data) => {
     if (err) throw err;
-    shell.echo(data);
+    const helpText =
+    `${data}\n\n` +
+    `Author: ${pjson.author.name}\n` +
+    `Contact: ${pjson.author.email}\n` +
+    `License: ${pjson.license}\n` +
+    `Bugs: ${pjson.bugs.url}\n`;
+    shell.echo(helpText);
     process.exit(0);
   });
 }
@@ -204,4 +210,3 @@ async function echoResults(resultsArrayPromise) {
     shell.echo(err);
   }
 }
-
