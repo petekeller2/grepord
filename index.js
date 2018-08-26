@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+"use strict"
+
 const shell = require('shelljs');
 const filesize = require('filesize');
 const fs = require('fs');
@@ -7,7 +9,26 @@ const promisifiedStat = promisify(fs.stat);
 const promisifiedExec = promisify(shell.exec);
 const args = process.argv.slice(2);
 
-// --------------- Functions Section ---------------
+// --------------- Validation ---------------
+if (args.length === 0) {
+  shell.echo('No arguments found');
+  process.exit(9);
+}
+
+// -------------- Help Section --------------
+if (isHelpCmd(args[0])) {
+  help();
+}
+
+// -------------- Grep Section --------------
+const [grepArgs, grepOrdArg] = splitArgs(args);
+const usersCommand = `grep  ${grepArgs.join(' ').trimStart()}`;
+const [sortBy, sortOrd, limit] = getSortArgs(grepOrdArg);
+const sortedResultsArray = sortResults(usersCommand, sortBy, sortOrd);
+const limitedResultsArray = limitResults(sortedResultsArray, limit);
+echoResults(limitedResultsArray);
+
+// ------------ Functions Section ------------
 function isHelpCmd(firstArg) {
   return ['help', '-h', '--help', 'man'].includes(firstArg);
 }
@@ -164,21 +185,3 @@ async function echoResults(resultsArrayPromise) {
   }
 }
 
-// --------------- Validation ---------------
-if (args.length === 0) {
-  shell.echo('No arguments found');
-  process.exit(9);
-}
-
-// --------------- Help Section ---------------
-if (isHelpCmd(args[0])) {
-  help();
-}
-
-// --------------- Grep Section ---------------
-const [grepArgs, grepOrdArg] = splitArgs(args);
-const usersCommand = `grep  ${grepArgs.join(' ').trimStart()}`;
-const [sortBy, sortOrd, limit] = getSortArgs(grepOrdArg);
-const sortedResultsArray = sortResults(usersCommand, sortBy, sortOrd);
-const limitedResultsArray = limitResults(sortedResultsArray, limit);
-echoResults(limitedResultsArray);

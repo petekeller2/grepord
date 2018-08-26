@@ -1,6 +1,7 @@
 {
   "name": "grepord",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "bin": "./index.js",
   "description": "Grep for an ordered list of files",
   "main": "index.js",
   "scripts": {
