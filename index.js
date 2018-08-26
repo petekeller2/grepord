@@ -169,7 +169,12 @@ async function sortResults(usersCommand, sortBy = 'mtime', sortOrd = 'desc') {
     });
 
   } catch(err) {
-    shell.echo(err);
+    if ((err.syscall === 'stat') && (err.code === 'ENOENT')) {
+      shell.echo('Grepord requires valid file path(s) to be returned (use l)');
+      process.exit(9);
+    } else {
+      shell.echo(err);
+    }
   }
   return sortedArray;
 }
