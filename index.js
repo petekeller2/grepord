@@ -3,6 +3,7 @@
 
 const shell = require('shelljs');
 const filesize = require('filesize');
+const pjson = require('./package.json');
 const fs = require('fs');
 const { promisify } = require('util');
 const promisifiedStat = promisify(fs.stat);
@@ -18,6 +19,11 @@ if (args.length === 0) {
 // -------------- Help Section --------------
 if (isHelpCmd(args[0])) {
   help();
+}
+
+// ------------- Version Section -------------
+if (isVersionCmd(args[0])) {
+  getVersion();
 }
 
 // -------------- Grep Section --------------
@@ -40,6 +46,15 @@ function help() {
     shell.echo(data);
     process.exit(0);
   });
+}
+
+function isVersionCmd(firstArg) {
+  return ['version', '-v', '--version'].includes(firstArg);
+}
+
+function getVersion() {
+  shell.echo(pjson.version);
+  process.exit(0);
 }
 
 function splitArgs(args) {
