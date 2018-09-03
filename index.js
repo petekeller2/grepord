@@ -44,7 +44,7 @@ function help() {
   fs.readFile(readmePath, 'utf8', (err, data) => {
     if (err) throw err;
     const helpText =
-    `${data}\n\n` +
+    `${data.replace(/`/g, '')}\n\n` +
     `Author: ${pjson.author.name}\n` +
     `Contact: ${pjson.author.email}\n` +
     `License: ${pjson.license}\n` +
