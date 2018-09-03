@@ -27,12 +27,14 @@ if (isVersionCmd(args[0])) {
 }
 
 // -------------- Grep Section --------------
-const [grepArgs, grepOrdArg] = splitArgs(args);
-const usersCommand = `grep  ${grepArgs.join(' ').trimStart()}`;
-const [sortBy, sortOrd, limit] = getSortArgs(grepOrdArg);
-const sortedResultsArray = sortResults(usersCommand, sortBy, sortOrd);
-const limitedResultsArray = limitResults(sortedResultsArray, limit);
-echoResults(limitedResultsArray);
+if (!isHelpCmd(args[0]) && !isVersionCmd(args[0])) {
+  const [grepArgs, grepOrdArg] = splitArgs(args);
+  const usersCommand = `grep  ${grepArgs.join(' ').trimStart()}`;
+  const [sortBy, sortOrd, limit] = getSortArgs(grepOrdArg);
+  const sortedResultsArray = sortResults(usersCommand, sortBy, sortOrd);
+  const limitedResultsArray = limitResults(sortedResultsArray, limit);
+  echoResults(limitedResultsArray);
+}
 
 // ------------ Functions Section ------------
 function isHelpCmd(firstArg) {
@@ -44,7 +46,7 @@ function help() {
   fs.readFile(readmePath, 'utf8', (err, data) => {
     if (err) throw err;
     const helpText =
-    `${data.replace(/`/g, '')}\n\n` +
+    `${data.split("\n").slice(12).join("\n").replace(/`/g, '')}\n\n` +
     `Author: ${pjson.author.name}\n` +
     `Contact: ${pjson.author.email}\n` +
     `License: ${pjson.license}\n` +
@@ -105,7 +107,7 @@ async function getResults(usersCommand) {
     const results = await promisifiedExec(usersCommand, { silent:true });
     resultsArray = results.split('\n').filter(p => p);
   } catch(err) {
-    shell.echo(err);
+    // shell.echo(err); // debug
   }
   return resultsArray;
 }
@@ -193,7 +195,7 @@ async function limitResults(resultsArrayPromise, limit) {
       resultsArray =  resultsArray.slice(0, limit);
     }
   } catch(err) {
-    shell.echo(err);
+    // shell.echo(err); // debug
   }
   return resultsArray;
 }
