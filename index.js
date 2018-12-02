@@ -41,7 +41,7 @@ function isHelpCmd(firstArg) {
   return ['-h', '--help'].includes(firstArg);
 }
 
-function help() {
+function help(man = false) {
   const readmePath = `${__dirname}/README.md`;
   fs.readFile(readmePath, 'utf8', (err, data) => {
     if (err) throw err;
@@ -51,8 +51,23 @@ function help() {
     `Contact: ${pjson.author.email}\n` +
     `License: ${pjson.license}\n` +
     `Bugs: ${pjson.bugs.url}\n`;
-    shell.echo(helpText);
-    process.exit(0);
+
+    if (man) {
+      const resultsPromise = promisifiedExec(`
+      echo "${helpText}" > ./man/doc.1.ronn
+      ronn man/*.ronn
+      `, {silent:false});
+      resultsPromise.then(() => {
+        shell.echo('Man files generated');
+        process.exit(0);
+      }, (err) => {
+        shell.echo(`Error generating man files: ${err}`);
+        process.exit(0);
+      });
+    } else {
+      shell.echo(helpText);
+      process.exit(0);
+    }
   });
 }
 

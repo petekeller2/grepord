@@ -1,0 +1,25 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "DOC" "1" "December 2018" "" ""
+.
+.SH "NAME"
+\fBdoc\fR
+.
+.P
+grepord \fIgrep arguments\fR… [\-sort:[<fs\.Stats property>][,][(desc|asc)][,][\fIlimit number\fR]]
+.
+.P
+Type grep \-h to check if grep is installed\.
+.
+.P
+To use this program, you must enter grep arguments that will return file paths\. Example: grepord \-iRl \'\./\' \-e \'hello world\'
+.
+.P
+You can sort by the properties of fs\.Stats\. See: https://nodejs\.org/api/fs\.html#fs_class_fs_stats
+.
+.P
+The default sort is mtime descending\. The format for changing the sort is \-sort: as the last argument, with an optional fs\.Stats property, a comma, an optional desc or asc, a comma and then an optional limit number (This operates the same way as the SQL LIMIT clause)\. Example: grepord \-iRl \'\./\' \-e \'hello world\' \-sort:size,asc,10
+.
+.P
+Author: Peter Keller Contact: peterkeller@protonmail\.com License: MIT Bugs: https://github\.com/petekeller2/grepord/issues

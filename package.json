@@ -3,10 +3,15 @@
   "version": "1.0.1",
   "bin": "./index.js",
   "description": "Grep for an ordered list of files",
+  "private": false,
   "main": "index.js",
   "scripts": {
     "test": "ava --tap | tap-nyan"
   },
+  "files": [
+    "index.js"
+  ],
+  "man" : "./man/doc.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/petekeller2/grepord.git"
