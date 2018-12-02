@@ -54,7 +54,7 @@ function help(man = false) {
 
     if (man) {
       const resultsPromise = promisifiedExec(`
-      echo "${helpText}" > ./man/doc.1.ronn
+      echo "${helpText}" > ./man/grepord.1.ronn
       ronn man/*.ronn
       `, {silent:false});
       resultsPromise.then(() => {
