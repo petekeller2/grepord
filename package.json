@@ -1,6 +1,6 @@
 {
   "name": "grepord",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "bin": "./index.js",
   "description": "Grep for an ordered list of files",
   "private": false,
@@ -10,7 +10,7 @@
   },
   "files": [
     "index.js",
-    "man/doc.1"
+    "man/grepord.1"
   ],
   "man" : "./man/grepord.1",
   "repository": {
