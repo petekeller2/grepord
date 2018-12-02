@@ -9,7 +9,8 @@
     "test": "ava --tap | tap-nyan"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "man/doc.1"
   ],
   "man" : "./man/doc.1",
   "repository": {
