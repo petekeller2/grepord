@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/petekeller2/grepord.svg?branch=master)](https://travis-ci.org/petekeller2/grepord) 
 [![dependencies Status](https://david-dm.org/petekeller2/grepord/status.svg)](https://david-dm.org/petekeller2/grepord)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/petekeller2/grepord/LICENSE)
+[![npm version](http://img.shields.io/npm/v/grepord.svg?style=flat)](https://npmjs.org/package/grepord)
 
 # About
 
