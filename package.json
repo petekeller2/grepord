@@ -12,7 +12,7 @@
     "index.js",
     "man/grepord.1"
   ],
-  "man" : "./man/grepord.1",
+  "man": "./man/grepord.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/petekeller2/grepord.git"
