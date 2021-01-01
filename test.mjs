@@ -36,8 +36,8 @@ test('Asc Test', async t => {
   const results = await promisifiedExec("node index.js -iRl './test' -e 'hello' -sort:birthtime,asc", { silent:true });
 
   t.is(results.trim(),
-    './test/file_two.js 8/25/2018, 12:59:37 PM\n' +
     './test/file_three.md 8/25/2018, 12:59:37 PM\n' +
+    './test/file_two.js 8/25/2018, 12:59:37 PM\n' +
     './test/file_four.docx 8/25/2018, 1:02:09 PM'
   );
 });
@@ -52,9 +52,9 @@ test('birthtimeMs Test', async t => {
   const results = await promisifiedExec("node index.js -iRl './test' -e 'hello' -sort:birthtimeMs", { silent:true });
 
   t.is(results.trim(),
-    './test/file_four.docx 1535216529856.8086\n' +
-    './test/file_three.md 1535216377093.9592\n' +
-    './test/file_two.js 1535216377069.3208'
+    './test/file_four.docx 1535216529000\n' +
+    './test/file_three.md 1535216377000\n' +
+    './test/file_two.js 1535216377000'
   );
 });
 
@@ -62,7 +62,7 @@ test('Custom Sort Test', async t => {
   const results = await promisifiedExec("node index.js -iRl './test' -e 'hello' -sort:birthtimeMs,asc,1", { silent:true });
 
   t.is(results.trim(),
-    './test/file_two.js 1535216377069.3208'
+    './test/file_three.md 1535216377000'
   );
 });
 
@@ -70,9 +70,9 @@ test('No Limit Test', async t => {
   const results = await promisifiedExec("node index.js -iRl './test' -e 'hello' -sort:birthtimeMs,,0", { silent:true });
 
   t.is(results.trim(),
-    './test/file_four.docx 1535216529856.8086\n' +
-    './test/file_three.md 1535216377093.9592\n' +
-    './test/file_two.js 1535216377069.3208'
+    './test/file_four.docx 1535216529000\n' +
+    './test/file_three.md 1535216377000\n' +
+    './test/file_two.js 1535216377000'
   );
 });
 

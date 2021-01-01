@@ -31,15 +31,19 @@
   "homepage": "https://github.com/petekeller2/grepord#readme",
   "ava": {
     "files": [
-      "test.js"
+      "test.mjs"
+    ],
+    "nodeArguments": [
+      "--experimental-modules",
+      "--experimental-json-modules"
     ]
   },
   "devDependencies": {
-    "ava": "1.0.1",
+    "ava": "^3.15.0",
     "tap-nyan": "^1.1.0"
   },
   "dependencies": {
     "filesize": "^3.6.1",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.4"
   }
 }
