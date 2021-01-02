@@ -43,7 +43,7 @@
     "tap-nyan": "^1.1.0"
   },
   "dependencies": {
-    "filesize": "^3.6.1",
+    "filesize": "^6.1.0",
     "shelljs": "^0.8.4"
   }
 }
