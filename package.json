@@ -1,6 +1,6 @@
 {
-  "name": "grepord",
-  "version": "1.0.7",
+  "name": "@petekeller2/grepord",
+  "version": "1.0.8",
   "bin": "./index.js",
   "description": "Grep for an ordered list of files",
   "private": false,
@@ -39,7 +39,7 @@
     ]
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/@petekeller2"
+    "registry":"https://npm.pkg.github.com/"
   },
   "devDependencies": {
     "ava": "^3.15.0",
