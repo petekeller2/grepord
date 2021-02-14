@@ -1,12 +1,14 @@
 {
   "name": "grepord",
-  "version": "1.0.9",
+  "version": "1.8.1",
   "bin": "./index.js",
   "description": "Grep for an ordered list of files",
   "private": false,
   "main": "index.js",
   "scripts": {
-    "test": "ava --tap | tap-nyan"
+    "test": "ava --tap | tap-nyan",
+    "tag": "PKG_VER=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g');TAG_CMD=\"git tag -a v$PKG_VER -m 'Version $PKG_VER'\";eval $TAG_CMD;",
+    "release": "npm run tag | gren release"
   },
   "files": [
     "index.js",
