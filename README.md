@@ -2,6 +2,7 @@
 [![dependencies Status](https://status.david-dm.org/gh/petekeller2/grepord.svg)](https://david-dm.org/petekeller2/grepord)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/petekeller2/grepord/LICENSE)
 [![npm version](http://img.shields.io/npm/v/grepord.svg?style=flat)](https://npmjs.org/package/grepord)
+[![Automated Release Notes by gren](https://img.shields.io/badge/%F0%9F%A4%96-release%20notes-00B2EE.svg)](https://github-tools.github.io/github-release-notes/)
 
 # About
 
