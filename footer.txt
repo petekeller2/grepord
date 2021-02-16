@@ -1,0 +1,4 @@
+Author: Peter Keller
+Contact: peterkeller@protonmail.com
+License: MIT
+Bugs: https://github.com/petekeller2/grepord/issues
