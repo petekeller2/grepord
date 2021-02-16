@@ -68,7 +68,7 @@
 </p>
 <p>grepord <var>grep arguments</var>… [-sort:[&lt;fs.Stats property>][,][(desc|asc)][,][<var>limit number</var>]]</p>
 
-<p>Type grep -h to check if grep is installed.</p>
+<p>Grepord requires grep to already be installed. Type grep -h to check if grep is installed.</p>
 
 <p>To use this program, you must enter grep arguments that will return file paths. Example: grepord -iRl './' -e 'hello world'</p>
 
@@ -78,7 +78,7 @@
 the sort is -sort: as the last argument, with an optional
 fs.Stats property, a comma, an optional desc or asc, a comma and
 then an optional limit number (This operates the same way as the
-SQL LIMIT clause). Example: grepord -iRl './' -e 'hello world' -sort:size,asc,10</p>
+SQL LIMIT/TOP clause). Example: grepord -iRl './' -e 'hello world' -sort:size,asc,10</p>
 
 <p>Author: Peter Keller
 Contact: peterkeller@protonmail.com
@@ -88,7 +88,7 @@ Bugs: https://github.com/petekeller2/grepord/issues</p>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
-    <li class='tc'>December 2018</li>
+    <li class='tc'>February 2021</li>
     <li class='tr'>grepord(1)</li>
   </ol>
 
