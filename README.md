@@ -29,3 +29,16 @@ the sort is -sort: as the last argument, with an optional
 fs.Stats property, a comma, an optional desc or asc, a comma and
 then an optional limit number (This operates the same way as the
 SQL LIMIT/TOP clause). Example: `grepord -iRl './' -e 'hello world' -sort:size,asc,10`
+
+# Release Steps
+
+- `npm run test`
+- Update package.json version
+- `npm run build-man`
+- Push updates
+- `npm run release`
+
+# Source Code
+
+- index.js
+- test.mjs
