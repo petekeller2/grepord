@@ -5,8 +5,11 @@ name: Node.js Package
 
 on:
   workflow_dispatch:
-  release:
-    types: [released]
+  workflow_run:
+    workflows: ["New Release"]
+    branches: [main]
+    types: 
+      - completed
 
 jobs:
   build:
