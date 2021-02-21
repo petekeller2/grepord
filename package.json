@@ -13,7 +13,7 @@
     "build-man": "npm rum build-ronn && ronn man/grepord.1.ronn",
     "new-release-tag": "PKG_VER=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g');TAG_CMD=\"git tag -a v$(ECHO $PKG_VER | xargs) -m 'Version $PKG_VER'\";eval $TAG_CMD;",
     "push-tags": "git push origin --tags",
-    "changelog": "rm CHANGELOG.md && gren changelog --generate",
+    "changelog": "rm CHANGELOG.md && gren changelog --generate --data-source=commits",
     "push-release": "rm -f ./.git/index.lock && git add CHANGELOG.md && git commit -m 'New release' && git push origin master",
     "release": "npm run new-release-tag && npm run push-tags && gren release && npm run changelog && npm run push-release"
   },
