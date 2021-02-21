@@ -8,7 +8,9 @@ module.exports = {
   changelogTitle: '# Changelog\n\n',
   template: {
     release: function (placeholders,body) {
-      var formatedDate = new Date(placeholders.date).toLocaleDateString('fr-CA');
+      var dateParts = placeholders.date.split("/");
+      var formatedDate = new Date(dateParts[2], dateParts[1] - 1, +dateParts[0])
+        .toLocaleDateString('fr-CA'); // YYYY-MM-DD
       return `## ${placeholders.release} ${formatedDate}\n${placeholders.body}`
     },
     releaseSeparator: '\n- - - -\n\n'
