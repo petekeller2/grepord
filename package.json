@@ -27,7 +27,7 @@
     "url": "git+https://github.com/petekeller2/grepord.git"
   },
   "keywords": [
-    "grep", "cli"
+    "cli", "npm", "grep"
   ],
   "author": {
     "name": "Peter Keller",
