@@ -11,7 +11,7 @@ module.exports = {
       var dateParts = placeholders.date.split("/");
       var formatedDate = new Date(dateParts[2], dateParts[1] - 1, +dateParts[0])
         .toLocaleDateString('fr-CA'); // YYYY-MM-DD
-      return `## ${placeholders.release} ${formatedDate}\n${placeholders.body}`
+      return `## <RELEASE_VERSION> - ${formatedDate}\n${placeholders.body}`
     },
     releaseSeparator: '\n- - - -\n\n'
   }
