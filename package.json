@@ -1,6 +1,6 @@
 {
   "name": "grepord",
-  "version": "1.8.13",
+  "version": "1.8.14",
   "bin": "./index.js",
   "description": "Grep for an ordered list of files",
   "private": false,
@@ -27,7 +27,9 @@
     "url": "git+https://github.com/petekeller2/grepord.git"
   },
   "keywords": [
-    "cli", "npm", "grep"
+    "cli",
+    "npm",
+    "grep"
   ],
   "author": {
     "name": "Peter Keller",
