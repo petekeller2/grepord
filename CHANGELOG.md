@@ -1,6 +1,10 @@
 # Changelog
 
-## v1.8.13 - 2021-02-21
+## v1.8.14 - 2021-07-03
+- [Update dependencies](https://github.com/petekeller2/grepord/commit/48040d9c3fdd6414d2b76f35d167262bb46a15ac) - @petekeller2
+- [Show version number and add dash in changelog](https://github.com/petekeller2/grepord/commit/0c9c48d8f0e25698dfd02d36aea7cdd0ea09fe68) - @petekeller2
+- [Add new keyword](https://github.com/petekeller2/grepord/commit/cdc6018ebabfb5915e87f573553bd13491a9db0a) - @petekeller2
+- [Update keywords](https://github.com/petekeller2/grepord/commit/e459e8bc779802e17b72ccc3d77ae703e327c96d) - @petekeller2
 - [New release](https://github.com/petekeller2/grepord/commit/17dc9981a8817e064984fd85e06f21e08af395b5) - @petekeller2
 - [Fix date format bug](https://github.com/petekeller2/grepord/commit/6e72ad4b65f806149693d21ea15c53c282eafb40) - @petekeller2
 - [Update changelog script for new gren config](https://github.com/petekeller2/grepord/commit/e3bc21a653102320cda5d3e178ab27116bc36c86) - @petekeller2
