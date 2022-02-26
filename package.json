@@ -1,12 +1,12 @@
 {
   "name": "grepord",
-  "version": "1.8.16",
+  "version": "1.8.17",
   "bin": "./index.js",
   "description": "Grep for an ordered list of files",
   "private": false,
   "main": "index.js",
   "scripts": {
-    "test": "ava --tap | tap-nyan",
+    "test": "npx ava --tap | tap-nyan",
     "gem-installations": "gem install ronn",
     "man-src": "awk '/# Usage/,/# Release Steps/' README.md | sed '1d' | sed '1d' | sed '$d' | sed 's/`//g'",
     "build-ronn": "npm run --silent man-src > man/grepord.1.ronn && cat footer.txt >> man/grepord.1.ronn",
@@ -50,11 +50,11 @@
     ]
   },
   "devDependencies": {
-    "ava": "^3.15.0",
+    "ava": "^4.0.1",
     "tap-nyan": "^1.1.0"
   },
   "dependencies": {
-    "filesize": "^8.0.6",
-    "shelljs": "^0.8.4"
+    "filesize": "^8.0.7",
+    "shelljs": "^0.8.5"
   }
 }
