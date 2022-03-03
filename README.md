@@ -7,7 +7,7 @@
 # About
 
 Use this program to [grep](https://en.wikipedia.org/wiki/Grep) (search) for an ordered list of files. Example:
-Within a given directory, find the most recently updated files that
+Within a given directory, you could find the most recently updated files that
 contain the text 'hello world'.
 
 # Installation
