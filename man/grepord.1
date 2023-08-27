@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "GREPORD" "1" "March 2022" "" ""
+.TH "GREPORD" "1" "August 2023" "" ""
 .
 .SH "NAME"
 \fBgrepord\fR
@@ -19,7 +19,7 @@ To use this program, you must enter grep arguments that will return file paths\.
 You can sort by the properties of fs\.Stats\. See: https://nodejs\.org/api/fs\.html#fs_class_fs_stats
 .
 .P
-The default sort is mtime descending\. The format for changing the sort is \-sort: as the last argument, with an optional fs\.Stats property, a comma, an optional desc or asc, a comma and then an optional limit number (This operates the same way as the SQL LIMIT/TOP clause)\. Example: grepord \-iRl \'\./\' \-e \'hello world\' \-sort:size,asc,10
+The default sort is mtime descending\. The format for changing the sort is \-sort: as the last argument, with an optional fs\.Stats property, a comma, an optional desc or asc, a comma and then an optional limit number (This operates the same way as the SQL LIMIT/TOP clause)\. Example: grepord \-iRl \'\./test\' \-e \'hello\' \-sort:birthtimeMs,asc,1
 .
 .P
 Author: Peter Keller Contact: peterkeller@protonmail\.com License: MIT Bugs: https://github\.com/petekeller2/grepord/issues

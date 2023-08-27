@@ -1,6 +1,6 @@
 {
   "name": "grepord",
-  "version": "1.8.19",
+  "version": "1.8.21",
   "bin": "./index.js",
   "description": "Grep for an ordered list of files",
   "private": false,
@@ -50,11 +50,11 @@
     ]
   },
   "devDependencies": {
-    "ava": "^4.0.1",
+    "ava": "^5.3.1",
     "tap-nyan": "^1.1.0"
   },
   "dependencies": {
-    "filesize": "^8.0.7",
+    "filesize": "^10.0.12",
     "shelljs": "^0.8.5"
   }
 }

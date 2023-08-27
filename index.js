@@ -2,7 +2,6 @@
 "use strict"
 
 const shell = require('shelljs');
-const filesize = require('filesize');
 const pjson = require('./package.json');
 const fs = require('fs');
 const { promisify } = require('util');
@@ -150,10 +149,6 @@ function getSortDisplay(sortByResult, sortBy) {
     case 'ctime':
     case 'birthtime':
       sortDisplay = sortByResult.toLocaleString().replace(/ /g, '_');
-      break;
-    case 'size':
-    case 'blksize':
-      sortDisplay = filesize(sortByResult).replace(/ /g, '_');
       break;
   }
   return sortDisplay;

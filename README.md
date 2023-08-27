@@ -28,7 +28,7 @@ The default sort is mtime descending. The format for changing
 the sort is -sort: as the last argument, with an optional
 fs.Stats property, a comma, an optional desc or asc, a comma and
 then an optional limit number (This operates the same way as the
-SQL LIMIT/TOP clause). Example: `grepord -iRl './' -e 'hello world' -sort:size,asc,10`
+SQL LIMIT/TOP clause). Example: `grepord -iRl './test' -e 'hello' -sort:birthtimeMs,asc,1`
 
 # Release Steps
 
